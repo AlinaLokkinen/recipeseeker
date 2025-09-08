@@ -46,7 +46,7 @@ const Categorylist = () => {
                     <img
                       src={c.strCategoryThumb}
                       alt="A picture of food according to its category"
-                      className="h-40"
+                      className="h-40 rounded-2xl"
                     />
                     <p className="self-center text-2xl">{c.strCategory}</p>
                   </button>

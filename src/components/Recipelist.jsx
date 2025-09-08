@@ -27,23 +27,23 @@ const Recipelist = () => {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className="font-playfair m-25 font-medium grid grid-cols-2">
+      
         {recipes.map((rec) => {
           return (
-            <div key={rec.idMeal}>
-              <button>
+            <div key={rec.idMeal} className="mt-20">
+              <button className="flex gap-8">
                 <img
                   src={rec.strMealThumb}
                   alt={rec.strMeal}
-                  className="h-20"
+                  className="h-40 rounded-2xl"
                 />
-                <p>{rec.strMeal}</p>
+                <p className="self-center text-2xl">{rec.strMeal}</p>
               </button>
             </div>
           );
         })}
-      </div>
+      
     </div>
   );
 };
