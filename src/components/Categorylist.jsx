@@ -41,7 +41,7 @@ const Categorylist = () => {
                 <div key={c.idCategory} className="mt-20">
                   <button
                     className="flex gap-10"
-                    onClick={() => navigate(`/category/${c.strCategory}`)}
+                    onClick={() => navigate(`/categories/${c.strCategory}`)}
                   >
                     <img
                       src={c.strCategoryThumb}

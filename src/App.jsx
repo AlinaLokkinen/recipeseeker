@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/categories" element={<Categorylist />} />
-          <Route path="/category/:name" element={<Recipelist />} />
+          <Route path="/categories/:name" element={<Recipelist />} />
         </Routes>
       </BrowserRouter>
 
