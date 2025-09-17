@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <div className="bg-black relative h-screen">
-        <div className="bg-[url('../public/images/bg.jpg')] bg-cover h-screen opacity-50 absolute inset-0 "></div>
+        <div className="bg-[url('../images/bg.jpg')] bg-cover h-screen opacity-50 absolute inset-0 "></div>
         <div className="h-full flex flex-row justify-evenly ">
 
             {/* nimi */}

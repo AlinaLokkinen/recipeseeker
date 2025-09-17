@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const Recipelist = () => {
   const { name } = useParams();
+  const navigate = useNavigate();
 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -27,12 +28,18 @@ const Recipelist = () => {
   }, []);
 
   return (
-    <div className="font-playfair m-25 font-medium grid grid-cols-2">
+    <div className="font-playfair  font-medium ">
       
-        {recipes.map((rec) => {
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="grid grid-cols-2 m-25">
+            {recipes.map((rec) => {
           return (
             <div key={rec.idMeal} className="mt-20">
-              <button className="flex gap-8">
+              <button 
+                className="flex gap-8"
+                onClick={() => navigate(`/recipe/${rec.idMeal}`)}>
                 <img
                   src={rec.strMealThumb}
                   alt={rec.strMeal}
@@ -43,6 +50,8 @@ const Recipelist = () => {
             </div>
           );
         })}
+          </div>
+        )}
       
     </div>
   );
