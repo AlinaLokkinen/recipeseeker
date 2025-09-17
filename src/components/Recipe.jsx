@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router";
 
 const Recipe = () => {
   const { id } = useParams();
 
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [recipe, setRecipe] = useState();
   const [ingredients, setIngredients] = useState([]);
 
@@ -55,8 +56,11 @@ const Recipe = () => {
             return (
               <div className="m-25 font-playfair">
                 <div key={rec.idMeal} className="mb-10">
-                  <h1 className="text-6xl">{rec.strMeal}</h1>
-                  <p className="text-2xl mt-5">{rec.strCategory}</p>
+                  <h1 className="text-6xl mb-5">{rec.strMeal}</h1>
+                  <Link to={`/categories/${rec.strCategory}`}
+                  className="text-xl underline">
+                  {rec.strCategory}
+                  </Link>
                 </div>
                 <div className="flex justify-evenly">
                   <div className="w-1/4">
@@ -88,6 +92,9 @@ const Recipe = () => {
                       );
                     })}
                   </div>
+                  {rec.strYoutube && ( 
+                    <a href={rec.strYoutube} className="underline">Check out the instructions in video form!</a>
+                  )}
                 </div>
               </div>
             );
