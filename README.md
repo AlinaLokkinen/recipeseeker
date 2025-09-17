@@ -46,8 +46,7 @@ The app was created as part of my thesis to practice modern web development usin
 - Click on a recipe to view details.
 - Ingredients and instructions are listed.
 - Let the app choose a recipe for you based on your choice of category (COMING)
-- If a YouTube video is available, a link will appear:  
-  ![Video Link Example](src/assets/video-link-example.png)
+- If a YouTube video is available, it is shown in the recipe info.
 
 ## Technologies
 
@@ -61,9 +60,14 @@ The app was created as part of my thesis to practice modern web development usin
 ```
 src/
   components/
+    Categorylist.jsx
+    Home.jsx
+    Navbar.jsx
     Recipe.jsx
+    Recipelist.jsx
+  App.css
   App.jsx
-  index.js
+  Main.jsx
 ```
 
 ## License
@@ -72,4 +76,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Created by [Your Name]**
+**Created by Alina Lokkinen**
