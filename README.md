@@ -11,7 +11,7 @@ The app was created as part of my thesis to practice modern web development usin
 - **Browse Recipes:** Search and view recipes fetched from an external API.
 - **Detailed View:** See recipe name, category, image, ingredients, and instructions.
 - **Video Instructions:** If available, watch cooking instructions on YouTube.
-- **Random recipes:** Have the app choose a recipe for you, based on your choice of category. (COMING)
+- **Random recipes:** Have the app choose a recipe for you, based on your choice of category.
 - **Responsive UI:** Styled with Tailwind CSS for a modern look.
 
 
@@ -45,7 +45,7 @@ The app was created as part of my thesis to practice modern web development usin
 - Browse recipes by category.
 - Click on a recipe to view details.
 - Ingredients and instructions are listed.
-- Let the app choose a recipe for you based on your choice of category (COMING)
+- Let the app choose a recipe for you based on your choice of category
 - If a YouTube video is available, it is shown in the recipe info.
 
 ## Technologies
@@ -63,6 +63,7 @@ src/
     Categorylist.jsx
     Home.jsx
     Navbar.jsx
+    Randomizer.jsx
     Recipe.jsx
     Recipelist.jsx
   App.css
