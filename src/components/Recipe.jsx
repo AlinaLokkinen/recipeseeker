@@ -33,7 +33,7 @@ const Recipe = () => {
         const data = await res.json();
         setRecipe(data.meals);
       } catch (err) {
-        console.error("Virhe haettaessa reseptiä: " + err);
+        console.error("Error fetching recipe: " + err);
       } finally {
         setLoading(false);
       }
@@ -54,7 +54,7 @@ const Recipe = () => {
         <div>
           {recipe.map((rec) => {
             return (
-              <div className="m-25 font-playfair">
+              <div className="m-30 font-playfair">
                 <div key={rec.idMeal} className="mb-10">
                   <h1 className="text-6xl mb-5">{rec.strMeal}</h1>
                   <Link to={`/categories/${rec.strCategory}`}

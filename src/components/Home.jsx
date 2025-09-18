@@ -36,7 +36,7 @@ const Home = () => {
 
             <div className="flex flex-col gap-1 md:gap-3 lg:gap-5">
               <button className=" bg-stone-800 text-white rounded-4xl h-8 md:h-10 lg:h-15 w-1/2 lg:w-1/2 self-center text-xs md:text-sm lg:text-xl"
-              >
+              onClick={() => navigate("/randomizer")}>
                 RANDOM
               </button>
               <button className=" bg-stone-800 text-white rounded-4xl h-8 md:h-10 lg:h-15 w-1/2 lg:w-1/2 self-center text-xs md:text-sm lg:text-xl"
