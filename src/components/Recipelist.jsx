@@ -33,19 +33,19 @@ const Recipelist = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="grid grid-cols-2 m-25">
+          <div className="grid lg:grid-cols-2 m-15 lg:m-25">
             {recipes.map((rec) => {
           return (
-            <div key={rec.idMeal} className="mt-20">
+            <div key={rec.idMeal} className=" lg:mt-15">
               <button 
-                className="flex gap-8"
+                className="flex m-5 gap-4 lg:gap-8"
                 onClick={() => navigate(`/recipe/${rec.idMeal}`)}>
                 <img
                   src={rec.strMealThumb}
                   alt={rec.strMeal}
-                  className="h-40 rounded-2xl"
+                  className="h-30 lg:h-40 rounded-2xl"
                 />
-                <p className="self-center text-2xl">{rec.strMeal}</p>
+                <p className="self-center text-lg lg:text-2xl">{rec.strMeal}</p>
               </button>
             </div>
           );

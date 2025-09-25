@@ -54,37 +54,37 @@ const Recipe = () => {
         <div>
           {recipe.map((rec) => {
             return (
-              <div className="m-30 font-playfair">
+              <div className="m-15 lg:m-30 font-playfair">
                 <div key={rec.idMeal} className="mb-10">
-                  <h1 className="text-6xl mb-5">{rec.strMeal}</h1>
+                  <h1 className="text-2xl lg:text-6xl mb-5">{rec.strMeal}</h1>
                   <Link to={`/categories/${rec.strCategory}`}
-                  className="text-xl underline">
+                  className=" lg:text-xl underline">
                   {rec.strCategory}
                   </Link>
                 </div>
-                <div className="flex justify-evenly">
-                  <div className="w-1/4">
-                    <h2 className="text-3xl mb-5 ">Ingredients</h2>
+                <div className="lg:flex lg:justify-evenly">
+                  <div className="lg:w-1/4 mb-10">
+                    <h2 className="text-lg lg:text-3xl mb-5 ">Ingredients</h2>
                     {ingredients.map((ingr, i) => {
-                      return <li key={i} className="list-none m-2 text-lg">{ingr}</li>;
+                      return <li key={i} className="list-none mb-2 lg:m-2 text-sm lg:text-lg">{ingr}</li>;
                     })}
                   </div>
                   <div>
                     <img
                       src={rec.strMealThumb}
                       alt="A picture of a meal"
-                      className="h-120 rounded-xl"
+                      className="h-60 lg:h-120 rounded-xl"
                     />
                   </div>
                 </div>
                 <div className="">
-                  <h2 className="text-3xl mt-15 mb-5 text-center">
+                  <h2 className="text-lg lg:text-3xl mt-15 mb-5 text-center">
                     Instructions
                   </h2>
                   <div>
                     {rec.strInstructions.split("\r\n").map((rivi, i) => {
                       return (
-                        <span key={i} className="text-lg">
+                        <span key={i} className="text-md lg:text-lg">
                           {rivi}
                           <br />
                           <br />

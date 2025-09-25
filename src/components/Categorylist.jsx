@@ -27,18 +27,18 @@ const Categorylist = () => {
   }, []);
 
   return (
-    <div className="font-playfair m-25 font-medium">
+    <div className="font-playfair m-10 md:m-15 lg:m-25 font-medium">
       {loading ? (
         <p className="text-center text-3xl">Loading...</p>
       ) : (
         <div>
           <div>
-            <h1 className="text-3xl">Browse recipes by category</h1>
+            <h1 className="text-xl md:text-2xl lg:text-3xl">Browse recipes by category</h1>
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             {categoryInfo.map((c) => {
               return (
-                <div key={c.idCategory} className="mt-20">
+                <div key={c.idCategory} className="mt-15 lg:mt-20">
                   <button
                     className="flex gap-10"
                     onClick={() => navigate(`/categories/${c.strCategory}`)}
@@ -46,7 +46,7 @@ const Categorylist = () => {
                     <img
                       src={c.strCategoryThumb}
                       alt="A picture of food according to its category"
-                      className="h-40 rounded-2xl"
+                      className="h-30 lg:h-40 rounded-2xl"
                     />
                     <p className="self-center text-2xl">{c.strCategory}</p>
                   </button>

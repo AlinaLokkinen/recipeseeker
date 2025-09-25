@@ -5,7 +5,6 @@ const Randomizer = () => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [chosenCategory, setChosenCategory] = useState();
-  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -34,7 +33,6 @@ const Randomizer = () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      setRecipes(data.meals);
 
       if (data.meals && data.meals.length > 0) {
         const randomNumber = Math.floor(Math.random() * data.meals.length);
@@ -47,8 +45,8 @@ const Randomizer = () => {
   };
 
   return (
-    <div className="flex flex-row justify-around m-30 font-playfair">
-      <div className="flex flex-col text-center self-center">
+    <div className="flex flex-col lg:flex-row justify-around m-20 lg:m-30 font-playfair">
+      <div className="flex flex-col text-center self-center flex-1">
         <h1 className="text-2xl">
           Can't decide? Let Recipe Seeker choose for you!
         </h1>
@@ -56,7 +54,7 @@ const Randomizer = () => {
 
         {categories && (
           <select
-            className="text-center self-center w-1/3 mb-10 mt-5 "
+            className="text-center self-center w-1/3 mb-10 mt-5"
             value={chosenCategory}
             onChange={(e) => setChosenCategory(e.target.value)}
           >
@@ -66,18 +64,18 @@ const Randomizer = () => {
           </select>
         )}
         <button
-          className="bg-stone-800 text-white rounded-4xl h-18   self-center text-lg font-lexend text-center px-6"
+          className="bg-stone-800 text-white rounded-4xl lg:h-18 self-center text-md lg:text-lg font-lexend text-center px-6"
           onClick={getRandomRecipe}
         >
           GET RANDOM <br /> RECIPE
         </button>
       </div>
 
-      <div>
+      <div className="mt-15 flex-1">
         <img
           src="../images/randomizer.jpg"
           alt="an egg sandwich"
-          className="h-100 rounded-lg"
+          className="h-4/5 bg-blue-100 rounded-lg"
         />
       </div>
     </div>
