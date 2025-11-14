@@ -28,12 +28,17 @@ const Recipelist = () => {
   }, []);
 
   return (
-    <div className="font-playfair  font-medium ">
+    <div className="font-playfair m-15 font-medium ">
       
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <div className="grid lg:grid-cols-2 m-15 lg:m-25">
+          <div className="lg:m-25">
+            
+            <div className="">
+              <h2 className="text-2xl lg:text-3xl m-5 font-semibold">{name} recipes</h2>
+            </div>
+            <div className="grid lg:grid-cols-2 ">
             {recipes.map((rec) => {
           return (
             <div key={rec.idMeal} className=" lg:mt-15">
@@ -50,6 +55,7 @@ const Recipelist = () => {
             </div>
           );
         })}
+          </div>
           </div>
         )}
       
