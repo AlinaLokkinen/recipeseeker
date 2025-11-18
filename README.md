@@ -20,7 +20,7 @@ The app was created as part of my thesis to practice modern web development usin
 1. Clone the repository:
    ```sh
    git clone https://github.com/alinaLokkinen/recipeseeker.git
-   cd recipe-seeker
+   cd recipeseeker
    ```
 
 2. Install dependencies:
